@@ -9,3 +9,10 @@ def validar_nota(nota):
     if not NOTA_MINIMA <= nota <= NOTA_MAXIMA:
         raise ValueError(f"Nota fuera de rango: {nota}")
     return nota
+
+
+def validar_ponderaciones(ponderaciones):
+    """Las ponderaciones deben sumar 100."""
+    if abs(sum(ponderaciones) - 100) > 1e-9:
+        raise ValueError("Las ponderaciones deben sumar 100")
+    return ponderaciones
