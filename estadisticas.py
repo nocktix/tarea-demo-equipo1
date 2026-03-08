@@ -17,3 +17,12 @@ def desviacion_estandar(notas):
         return 0.0
     promedio = sum(notas) / n
     return (sum((x - promedio) ** 2 for x in notas) / (n - 1)) ** 0.5
+
+
+def resumen(notas):
+    return {
+        "cantidad": len(notas),
+        "promedio": sum(notas) / len(notas),
+        "mediana": mediana(notas),
+        "desviacion": desviacion_estandar(notas),
+    }
