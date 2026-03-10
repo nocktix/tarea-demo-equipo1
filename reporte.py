@@ -6,8 +6,8 @@ def formatear_reporte(resumen):
         "Reporte de notas",
         "----------------",
         f"Cantidad:   {resumen['cantidad']}",
-        f"Promedio:   {resumen['promedio']}",
+        f"Promedio:   {resumen['promedio']:.1f}",
         f"Mediana:    {resumen['mediana']}",
-        f"Desviación: {resumen['desviacion']}",
+        f"Desviación: {resumen['desviacion']:.2f}",
     ]
     return "\n".join(lineas)
